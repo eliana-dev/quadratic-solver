@@ -52,3 +52,11 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Archivos temporales de Visual Studio
+.vs/
+*.vscode
+*.user
+*.suo
+*.cache
+*.vsidx
