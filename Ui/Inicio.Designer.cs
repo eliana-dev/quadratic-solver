@@ -43,13 +43,14 @@
             txtA = new TextBox();
             label5 = new Label();
             groupBox2 = new GroupBox();
-            txtX2 = new TextBox();
             label9 = new Label();
-            txtX1 = new TextBox();
             label8 = new Label();
             btnCalcular = new Button();
             btnBorrar = new Button();
             btnSalir = new Button();
+            lblResultado = new Label();
+            lblx1 = new Label();
+            lblx2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox1.SuspendLayout();
@@ -184,7 +185,6 @@
             label6.Size = new Size(94, 31);
             label6.TabIndex = 2;
             label6.Text = "Valor b";
-            label6.Click += label6_Click;
             // 
             // txtA
             // 
@@ -210,9 +210,9 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(txtX2);
+            groupBox2.Controls.Add(lblx2);
+            groupBox2.Controls.Add(lblx1);
             groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(txtX1);
             groupBox2.Controls.Add(label8);
             groupBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox2.ForeColor = Color.IndianRed;
@@ -223,45 +223,23 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Raices";
             // 
-            // txtX2
-            // 
-            txtX2.BackColor = Color.BlanchedAlmond;
-            txtX2.ForeColor = Color.IndianRed;
-            txtX2.Location = new Point(564, 46);
-            txtX2.Multiline = true;
-            txtX2.Name = "txtX2";
-            txtX2.Size = new Size(73, 36);
-            txtX2.TabIndex = 9;
-            txtX2.TextAlign = HorizontalAlignment.Center;
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.Gray;
-            label9.Location = new Point(516, 44);
+            label9.Location = new Point(472, 43);
             label9.Name = "label9";
             label9.Size = new Size(42, 38);
             label9.TabIndex = 8;
             label9.Text = "x₂";
-            // 
-            // txtX1
-            // 
-            txtX1.BackColor = Color.BlanchedAlmond;
-            txtX1.ForeColor = Color.IndianRed;
-            txtX1.Location = new Point(363, 46);
-            txtX1.Multiline = true;
-            txtX1.Name = "txtX1";
-            txtX1.Size = new Size(73, 36);
-            txtX1.TabIndex = 7;
-            txtX1.TextAlign = HorizontalAlignment.Center;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.Gray;
-            label8.Location = new Point(315, 44);
+            label8.Location = new Point(315, 43);
             label8.Name = "label8";
             label8.Size = new Size(42, 38);
             label8.TabIndex = 6;
@@ -270,6 +248,7 @@
             // btnCalcular
             // 
             btnCalcular.BackColor = Color.IndianRed;
+            btnCalcular.Cursor = Cursors.Hand;
             btnCalcular.FlatStyle = FlatStyle.Flat;
             btnCalcular.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCalcular.ForeColor = Color.SeaShell;
@@ -279,10 +258,12 @@
             btnCalcular.TabIndex = 8;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = false;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // btnBorrar
             // 
             btnBorrar.BackColor = Color.IndianRed;
+            btnBorrar.Cursor = Cursors.Hand;
             btnBorrar.FlatStyle = FlatStyle.Flat;
             btnBorrar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBorrar.ForeColor = Color.SeaShell;
@@ -296,6 +277,7 @@
             // btnSalir
             // 
             btnSalir.BackColor = Color.IndianRed;
+            btnSalir.Cursor = Cursors.Hand;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.SeaShell;
@@ -306,12 +288,49 @@
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             // 
+            // lblResultado
+            // 
+            lblResultado.AutoSize = true;
+            lblResultado.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblResultado.ForeColor = Color.LightCoral;
+            lblResultado.Location = new Point(651, 643);
+            lblResultado.Name = "lblResultado";
+            lblResultado.Size = new Size(66, 23);
+            lblResultado.TabIndex = 11;
+            lblResultado.Text = "Default";
+            lblResultado.Visible = false;
+            // 
+            // lblx1
+            // 
+            lblx1.AutoSize = true;
+            lblx1.BackColor = Color.BlanchedAlmond;
+            lblx1.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblx1.ForeColor = Color.IndianRed;
+            lblx1.Location = new Point(363, 43);
+            lblx1.Name = "lblx1";
+            lblx1.Size = new Size(53, 38);
+            lblx1.TabIndex = 9;
+            lblx1.Text = "    ";
+            // 
+            // lblx2
+            // 
+            lblx2.AutoSize = true;
+            lblx2.BackColor = Color.BlanchedAlmond;
+            lblx2.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblx2.ForeColor = Color.IndianRed;
+            lblx2.Location = new Point(520, 43);
+            lblx2.Name = "lblx2";
+            lblx2.Size = new Size(53, 38);
+            lblx2.TabIndex = 10;
+            lblx2.Text = "    ";
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1421, 774);
+            Controls.Add(lblResultado);
             Controls.Add(btnSalir);
             Controls.Add(btnBorrar);
             Controls.Add(btnCalcular);
@@ -326,8 +345,9 @@
             ForeColor = Color.IndianRed;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Inicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Quadratic Solver";
-            Load += this.Inicio_Load;
+            Load += Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             groupBox1.ResumeLayout(false);
@@ -357,9 +377,10 @@
         private Label label7;
         private TextBox txtB;
         private Label label6;
-        private TextBox txtX1;
         private Label label8;
-        private TextBox txtX2;
         private Label label9;
+        private Label lblResultado;
+        private Label lblx1;
+        private Label lblx2;
     }
 }
