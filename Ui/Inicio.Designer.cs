@@ -327,6 +327,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Inicio";
             Text = "Quadratic Solver";
+            Load += this.Inicio_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             groupBox1.ResumeLayout(false);

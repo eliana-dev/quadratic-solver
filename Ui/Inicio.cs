@@ -7,9 +7,5 @@ namespace quadratic_solver
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
