@@ -1,5 +1,6 @@
 using quadratic_solver.Services;
-
+using quadratic_solver.Utils;
+using System.Diagnostics;
 namespace quadratic_solver
 {
     public partial class Inicio : Form
@@ -16,10 +17,24 @@ namespace quadratic_solver
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(txtA.Text);
-            double b = Convert.ToDouble(txtB.Text);
-            double c = Convert.ToDouble(txtC.Text);
-            Calculos.CalcularRaices(a, b, c, lblx1, lblx2, lblResultado);
+            Validaciones.MostrarFuncion(txtA, txtB, txtC, lblFuncion);
+            Calculos.CalcularRaices(txtA, txtB, txtC, lblx1, lblx2, lblResultado);
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.ValidarSoloNumeros(sender, e);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            Validaciones.Borrar(lblx1, lblx2, lblResultado, lblFuncion, txtA, txtB, txtC);
         }
     }
 }

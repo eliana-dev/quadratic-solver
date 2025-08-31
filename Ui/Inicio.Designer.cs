@@ -43,14 +43,14 @@
             txtA = new TextBox();
             label5 = new Label();
             groupBox2 = new GroupBox();
+            lblx2 = new Label();
+            lblx1 = new Label();
             label9 = new Label();
             label8 = new Label();
             btnCalcular = new Button();
             btnBorrar = new Button();
             btnSalir = new Button();
             lblResultado = new Label();
-            lblx1 = new Label();
-            lblx2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox1.SuspendLayout();
@@ -223,6 +223,30 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Raices";
             // 
+            // lblx2
+            // 
+            lblx2.AutoSize = true;
+            lblx2.BackColor = Color.BlanchedAlmond;
+            lblx2.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblx2.ForeColor = Color.IndianRed;
+            lblx2.Location = new Point(520, 43);
+            lblx2.Name = "lblx2";
+            lblx2.Size = new Size(53, 38);
+            lblx2.TabIndex = 10;
+            lblx2.Text = "    ";
+            // 
+            // lblx1
+            // 
+            lblx1.AutoSize = true;
+            lblx1.BackColor = Color.BlanchedAlmond;
+            lblx1.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblx1.ForeColor = Color.IndianRed;
+            lblx1.Location = new Point(363, 43);
+            lblx1.Name = "lblx1";
+            lblx1.Size = new Size(53, 38);
+            lblx1.TabIndex = 9;
+            lblx1.Text = "    ";
+            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -273,6 +297,7 @@
             btnBorrar.TabIndex = 9;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = false;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // btnSalir
             // 
@@ -287,42 +312,18 @@
             btnSalir.TabIndex = 10;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // lblResultado
             // 
             lblResultado.AutoSize = true;
             lblResultado.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblResultado.ForeColor = Color.LightCoral;
-            lblResultado.Location = new Point(651, 643);
+            lblResultado.Location = new Point(632, 642);
             lblResultado.Name = "lblResultado";
-            lblResultado.Size = new Size(66, 23);
+            lblResultado.Size = new Size(75, 23);
             lblResultado.TabIndex = 11;
-            lblResultado.Text = "Default";
-            lblResultado.Visible = false;
-            // 
-            // lblx1
-            // 
-            lblx1.AutoSize = true;
-            lblx1.BackColor = Color.BlanchedAlmond;
-            lblx1.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblx1.ForeColor = Color.IndianRed;
-            lblx1.Location = new Point(363, 43);
-            lblx1.Name = "lblx1";
-            lblx1.Size = new Size(53, 38);
-            lblx1.TabIndex = 9;
-            lblx1.Text = "    ";
-            // 
-            // lblx2
-            // 
-            lblx2.AutoSize = true;
-            lblx2.BackColor = Color.BlanchedAlmond;
-            lblx2.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblx2.ForeColor = Color.IndianRed;
-            lblx2.Location = new Point(520, 43);
-            lblx2.Name = "lblx2";
-            lblx2.Size = new Size(53, 38);
-            lblx2.TabIndex = 10;
-            lblx2.Text = "    ";
+            lblResultado.Text = "             ";
             // 
             // Inicio
             // 
