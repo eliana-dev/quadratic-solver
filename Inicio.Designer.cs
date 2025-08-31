@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
+            lblFuncion = new Label();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label6 = new Label();
-            textBox3 = new TextBox();
+            txtC = new TextBox();
             label7 = new Label();
-            textBox4 = new TextBox();
-            label8 = new Label();
-            textBox5 = new TextBox();
+            txtB = new TextBox();
+            label6 = new Label();
+            txtA = new TextBox();
+            label5 = new Label();
+            groupBox2 = new GroupBox();
+            txtX2 = new TextBox();
             label9 = new Label();
+            txtX1 = new TextBox();
+            label8 = new Label();
+            btnCalcular = new Button();
+            btnBorrar = new Button();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             groupBox1.SuspendLayout();
@@ -67,7 +68,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.IndianRed;
-            pictureBox2.Image = Properties.Resources.e_logo;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(55, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(135, 96);
@@ -80,7 +81,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.IndianRed;
             label1.Font = new Font("Dubai", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.GradientInactiveCaption;
+            label1.ForeColor = Color.SeaShell;
             label1.Location = new Point(989, 9);
             label1.Name = "label1";
             label1.Size = new Size(370, 79);
@@ -110,26 +111,26 @@
             label3.Text = "Ingrese los valores de los coeficientes para la ecuación ax² + bx + c = 0 y el programa calculará \r\nlas raíces correspondientes.";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblFuncion
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.IndianRed;
-            label4.Font = new Font("Calibri", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.SeaShell;
-            label4.Location = new Point(603, 260);
-            label4.Name = "label4";
-            label4.Size = new Size(143, 41);
-            label4.TabIndex = 5;
-            label4.Text = "ax²+bx+c";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            lblFuncion.AutoSize = true;
+            lblFuncion.BackColor = Color.IndianRed;
+            lblFuncion.Font = new Font("Calibri", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFuncion.ForeColor = Color.SeaShell;
+            lblFuncion.Location = new Point(603, 260);
+            lblFuncion.Name = "lblFuncion";
+            lblFuncion.Size = new Size(143, 41);
+            lblFuncion.TabIndex = 5;
+            lblFuncion.Text = "ax²+bx+c";
+            lblFuncion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txtC);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtB);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtA);
             groupBox1.Controls.Add(label5);
             groupBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.IndianRed;
@@ -140,88 +141,38 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Valores";
             // 
-            // groupBox2
+            // txtC
             // 
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox2.ForeColor = Color.IndianRed;
-            groupBox2.Location = new Point(227, 523);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(953, 105);
-            groupBox2.TabIndex = 7;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Raices";
+            txtC.BackColor = Color.BlanchedAlmond;
+            txtC.ForeColor = Color.IndianRed;
+            txtC.Location = new Point(671, 46);
+            txtC.Multiline = true;
+            txtC.Name = "txtC";
+            txtC.Size = new Size(73, 36);
+            txtC.TabIndex = 5;
+            txtC.TextAlign = HorizontalAlignment.Center;
             // 
-            // button1
+            // label7
             // 
-            button1.BackColor = Color.IndianRed;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.SeaShell;
-            button1.Location = new Point(603, 451);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 44);
-            button1.TabIndex = 8;
-            button1.Text = "Calcular";
-            button1.UseVisualStyleBackColor = false;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI Symbol", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Gray;
+            label7.Location = new Point(574, 46);
+            label7.Name = "label7";
+            label7.Size = new Size(91, 31);
+            label7.TabIndex = 4;
+            label7.Text = "Valor c";
             // 
-            // button2
+            // txtB
             // 
-            button2.BackColor = Color.IndianRed;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.SeaShell;
-            button2.Location = new Point(478, 666);
-            button2.Name = "button2";
-            button2.Size = new Size(143, 44);
-            button2.TabIndex = 9;
-            button2.Text = "Borrar";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.IndianRed;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.SeaShell;
-            button3.Location = new Point(773, 666);
-            button3.Name = "button3";
-            button3.Size = new Size(143, 44);
-            button3.TabIndex = 10;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Symbol", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Gray;
-            label5.Location = new Point(160, 46);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 31);
-            label5.TabIndex = 0;
-            label5.Text = "Valor a";
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.GradientInactiveCaption;
-            textBox1.Location = new Point(258, 46);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(73, 36);
-            textBox1.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = SystemColors.GradientInactiveCaption;
-            textBox2.Location = new Point(463, 46);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(73, 36);
-            textBox2.TabIndex = 3;
+            txtB.BackColor = Color.BlanchedAlmond;
+            txtB.ForeColor = Color.IndianRed;
+            txtB.Location = new Point(463, 46);
+            txtB.Multiline = true;
+            txtB.Name = "txtB";
+            txtB.Size = new Size(73, 36);
+            txtB.TabIndex = 3;
+            txtB.TextAlign = HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -235,54 +186,53 @@
             label6.Text = "Valor b";
             label6.Click += label6_Click;
             // 
-            // textBox3
+            // txtA
             // 
-            textBox3.BackColor = SystemColors.GradientInactiveCaption;
-            textBox3.Location = new Point(671, 46);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(73, 36);
-            textBox3.TabIndex = 5;
+            txtA.BackColor = Color.BlanchedAlmond;
+            txtA.ForeColor = Color.IndianRed;
+            txtA.Location = new Point(258, 46);
+            txtA.Multiline = true;
+            txtA.Name = "txtA";
+            txtA.Size = new Size(73, 36);
+            txtA.TabIndex = 1;
+            txtA.TextAlign = HorizontalAlignment.Center;
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI Symbol", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Gray;
-            label7.Location = new Point(574, 46);
-            label7.Name = "label7";
-            label7.Size = new Size(91, 31);
-            label7.TabIndex = 4;
-            label7.Text = "Valor c";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Symbol", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Gray;
+            label5.Location = new Point(160, 46);
+            label5.Name = "label5";
+            label5.Size = new Size(92, 31);
+            label5.TabIndex = 0;
+            label5.Text = "Valor a";
             // 
-            // textBox4
+            // groupBox2
             // 
-            textBox4.BackColor = SystemColors.GradientInactiveCaption;
-            textBox4.Location = new Point(363, 46);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(73, 36);
-            textBox4.TabIndex = 7;
+            groupBox2.Controls.Add(txtX2);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(txtX1);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBox2.ForeColor = Color.IndianRed;
+            groupBox2.Location = new Point(227, 523);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(953, 105);
+            groupBox2.TabIndex = 7;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Raices";
             // 
-            // label8
+            // txtX2
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Gray;
-            label8.Location = new Point(315, 44);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 38);
-            label8.TabIndex = 6;
-            label8.Text = "x₁";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = SystemColors.GradientInactiveCaption;
-            textBox5.Location = new Point(564, 46);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(73, 36);
-            textBox5.TabIndex = 9;
+            txtX2.BackColor = Color.BlanchedAlmond;
+            txtX2.ForeColor = Color.IndianRed;
+            txtX2.Location = new Point(564, 46);
+            txtX2.Multiline = true;
+            txtX2.Name = "txtX2";
+            txtX2.Size = new Size(73, 36);
+            txtX2.TabIndex = 9;
+            txtX2.TextAlign = HorizontalAlignment.Center;
             // 
             // label9
             // 
@@ -295,24 +245,86 @@
             label9.TabIndex = 8;
             label9.Text = "x₂";
             // 
+            // txtX1
+            // 
+            txtX1.BackColor = Color.BlanchedAlmond;
+            txtX1.ForeColor = Color.IndianRed;
+            txtX1.Location = new Point(363, 46);
+            txtX1.Multiline = true;
+            txtX1.Name = "txtX1";
+            txtX1.Size = new Size(73, 36);
+            txtX1.TabIndex = 7;
+            txtX1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI Symbol", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Gray;
+            label8.Location = new Point(315, 44);
+            label8.Name = "label8";
+            label8.Size = new Size(42, 38);
+            label8.TabIndex = 6;
+            label8.Text = "x₁";
+            // 
+            // btnCalcular
+            // 
+            btnCalcular.BackColor = Color.IndianRed;
+            btnCalcular.FlatStyle = FlatStyle.Flat;
+            btnCalcular.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCalcular.ForeColor = Color.SeaShell;
+            btnCalcular.Location = new Point(603, 451);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(143, 44);
+            btnCalcular.TabIndex = 8;
+            btnCalcular.Text = "Calcular";
+            btnCalcular.UseVisualStyleBackColor = false;
+            // 
+            // btnBorrar
+            // 
+            btnBorrar.BackColor = Color.IndianRed;
+            btnBorrar.FlatStyle = FlatStyle.Flat;
+            btnBorrar.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBorrar.ForeColor = Color.SeaShell;
+            btnBorrar.Location = new Point(478, 680);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(143, 44);
+            btnBorrar.TabIndex = 9;
+            btnBorrar.Text = "Borrar";
+            btnBorrar.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.IndianRed;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalir.ForeColor = Color.SeaShell;
+            btnSalir.Location = new Point(773, 680);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(143, 44);
+            btnSalir.TabIndex = 10;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1421, 774);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnSalir);
+            Controls.Add(btnBorrar);
+            Controls.Add(btnCalcular);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(label4);
+            Controls.Add(lblFuncion);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             ForeColor = Color.IndianRed;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Inicio";
             Text = "Quadratic Solver";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -332,21 +344,21 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
+        private Label lblFuncion;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button btnCalcular;
+        private TextBox txtA;
         private Label label5;
-        private Button button2;
-        private Button button3;
-        private TextBox textBox3;
+        private Button btnBorrar;
+        private Button btnSalir;
+        private TextBox txtC;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox txtB;
         private Label label6;
-        private TextBox textBox4;
+        private TextBox txtX1;
         private Label label8;
-        private TextBox textBox5;
+        private TextBox txtX2;
         private Label label9;
     }
 }
