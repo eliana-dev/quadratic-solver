@@ -60,9 +60,10 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.IndianRed;
-            pictureBox1.Location = new Point(-1, -3);
+            pictureBox1.Dock = DockStyle.Top;
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1460, 99);
+            pictureBox1.Size = new Size(1421, 99);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -188,6 +189,7 @@
             // 
             // txtA
             // 
+            txtA.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtA.BackColor = Color.BlanchedAlmond;
             txtA.ForeColor = Color.IndianRed;
             txtA.Location = new Point(258, 46);
@@ -344,7 +346,10 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             ForeColor = Color.IndianRed;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Inicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quadratic Solver";
