@@ -151,8 +151,9 @@
             txtC.Multiline = true;
             txtC.Name = "txtC";
             txtC.Size = new Size(73, 36);
-            txtC.TabIndex = 5;
+            txtC.TabIndex = 3;
             txtC.TextAlign = HorizontalAlignment.Center;
+            txtC.KeyPress += SoloNumeros;
             // 
             // label7
             // 
@@ -173,8 +174,9 @@
             txtB.Multiline = true;
             txtB.Name = "txtB";
             txtB.Size = new Size(73, 36);
-            txtB.TabIndex = 3;
+            txtB.TabIndex = 2;
             txtB.TextAlign = HorizontalAlignment.Center;
+            txtB.KeyPress += SoloNumeros;
             // 
             // label6
             // 
@@ -198,6 +200,7 @@
             txtA.Size = new Size(73, 36);
             txtA.TabIndex = 1;
             txtA.TextAlign = HorizontalAlignment.Center;
+            txtA.KeyPress += SoloNumeros;
             // 
             // label5
             // 
@@ -234,7 +237,7 @@
             lblx2.Location = new Point(520, 43);
             lblx2.Name = "lblx2";
             lblx2.Size = new Size(53, 38);
-            lblx2.TabIndex = 10;
+            lblx2.TabIndex = 6;
             lblx2.Text = "    ";
             // 
             // lblx1
@@ -246,7 +249,7 @@
             lblx1.Location = new Point(363, 43);
             lblx1.Name = "lblx1";
             lblx1.Size = new Size(53, 38);
-            lblx1.TabIndex = 9;
+            lblx1.TabIndex = 5;
             lblx1.Text = "    ";
             // 
             // label9
@@ -281,7 +284,7 @@
             btnCalcular.Location = new Point(603, 451);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(143, 44);
-            btnCalcular.TabIndex = 8;
+            btnCalcular.TabIndex = 4;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = false;
             btnCalcular.Click += btnCalcular_Click;
@@ -296,7 +299,7 @@
             btnBorrar.Location = new Point(478, 680);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(143, 44);
-            btnBorrar.TabIndex = 9;
+            btnBorrar.TabIndex = 7;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = false;
             btnBorrar.Click += btnBorrar_Click;
@@ -311,7 +314,7 @@
             btnSalir.Location = new Point(773, 680);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(143, 44);
-            btnSalir.TabIndex = 10;
+            btnSalir.TabIndex = 8;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
@@ -321,7 +324,7 @@
             lblResultado.AutoSize = true;
             lblResultado.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblResultado.ForeColor = Color.LightCoral;
-            lblResultado.Location = new Point(632, 642);
+            lblResultado.Location = new Point(590, 640);
             lblResultado.Name = "lblResultado";
             lblResultado.Size = new Size(75, 23);
             lblResultado.TabIndex = 11;
