@@ -8,40 +8,29 @@ namespace quadratic_solver.Utils
 {
     internal class Validaciones
     {
-        public static void MostrarFuncion(TextBox txtA, TextBox txtB, TextBox txtC, Label lblFuncion)
+        public static void ValidarFormatoTextbox(TextBox txtA, TextBox txtB, TextBox txtC)
         {
-            if (string.IsNullOrWhiteSpace(txtA.Text) || string.IsNullOrWhiteSpace(txtB.Text) || string.IsNullOrWhiteSpace(txtC.Text))
-            {
-                MessageBox.Show("Todos los campos de valores deben ser llenados.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            double a;
-            double b;
-            double c;
+            double a, b, c;
 
-            if(!double.TryParse(txtA.Text, out a))
+            if (!double.TryParse(txtA.Text, out a) ||
+                !double.TryParse(txtB.Text, out b) ||
+                !double.TryParse(txtC.Text, out c))
             {
-                MessageBox.Show("El valor ingresado en A no es valido!", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                throw new FormatException("Uno o más valores ingresados no son numéricos.");
             }
 
-            if (!double.TryParse(txtB.Text, out b))
-            {
-                MessageBox.Show("El valor ingresado en B no es valido!", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
 
-            if (!double.TryParse(txtC.Text, out c))
+            if (a == 0)
             {
-                MessageBox.Show("El valor ingresado en C no es valido!", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                throw new ArgumentException("El valor de A no puede ser 0 en una ecuación cuadrática.");
             }
-
+        }
+        public static void MostrarFuncion(double a, double b, double c, Label lblFuncion)
+        {
             string funcion = "";
 
             if (a == 0)
             {
-                MessageBox.Show("A no puede ser 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 funcion += "A" + "";
             }
 
@@ -92,7 +81,8 @@ namespace quadratic_solver.Utils
                 funcion += "+" + c;
             }
             lblFuncion.Text = funcion;
-        }
+            }
+           
 
         public static void ValidarSoloNumeros(object sender, KeyPressEventArgs e)
         {
