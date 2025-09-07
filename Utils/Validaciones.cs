@@ -82,23 +82,17 @@ namespace quadratic_solver.Utils
             }
             lblFuncion.Text = funcion;
             }
-           
+
 
         public static void ValidarSoloNumeros(object sender, KeyPressEventArgs e)
+        //asci: 08=backspace, 45=negative, 46=dot, 44=comma.
         {
-            if (!char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if ((e.KeyChar) == 8)
-            {
+            if (!char.IsDigit(e.KeyChar)) e.Handled = true;
+            
+            if ((e.KeyChar) == 8 || (e.KeyChar) == 45 || (e.KeyChar) == 44)
                 e.Handled = false;
-            }
-            if ((e.KeyChar) == 45)
-            {
-                e.Handled = false;
-            }
         }
+        
 
         public static void Borrar (Label lblx1, Label lblx2, Label lblResultado,Label lblFuncion, params TextBox[] textBoxes)
         {
