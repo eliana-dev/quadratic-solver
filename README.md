@@ -55,7 +55,7 @@ Los valores ingresados por el usuario resulto en una función con raices duplica
 
 Los valores ingresados por el usuario resulto en una función sin raices (sin resultados reales).
 
-![Sin Raices](Resources\no-reales.png "Resultado sin raices reales")
+![Sin Raices](Resources/no-reales.png "Resultado sin raices reales")
 
 ## 📂 Tecnologias utilizadas
 
