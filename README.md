@@ -49,7 +49,7 @@ Los valores ingresados por el usuario resulto en una función con raices diferen
 
 Los valores ingresados por el usuario resulto en una función con raices duplicadas.
 
-![Iguales](Resources\‍iguales.png "Resultado con raices duplicadas")
+![Iguales](Resources/no-reales.png "Resultado con raices duplicadas")
 
 ### Caso 3: Sin raices reales
 
