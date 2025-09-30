@@ -46,6 +46,7 @@ namespace quadratic_solver.Services
                     double raizNegativa = (-b - Math.Sqrt(discriminante)) / (2.0 * a);
                     lblx1.Text = raizPositiva.ToString("0.00");
                     lblx2.Text = raizNegativa.ToString("0.00");
+                    lblResultado.Text = " Función con raices diferentes";
                 }
             } catch (Exception ex) 
             {
